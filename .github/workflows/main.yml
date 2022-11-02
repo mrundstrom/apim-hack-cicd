@@ -13,9 +13,9 @@ jobs:
       name: marrun         # Your POSTFIX
 
     steps:
-    - uses: actions/checkout@main       # Checkout the code to the GitHub runner 
+      - uses: actions/checkout@main       # Checkout the code to the GitHub runner
 
-    - name: Log into Azure              # Log into Azure using the service credentials provided earlier
+      - name: Log into Azure              # Log into Azure using the service credentials provided earlier
         uses: azure/login@v1
         with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
